@@ -10,3 +10,7 @@ skillForm.addEventListener("submit", function(e) {
     const skillName = document.getElementById("skillName").value.trim();
     const targetHours = parseInt(document.getElementById("targetHours").value);
 }
+
+  if (skillName && targetHours > 0) {
+    
+    };
