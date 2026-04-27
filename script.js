@@ -40,6 +40,9 @@ logForm.addEventListener("submit", function(e) {
 function updateSkillOptions() {
    logSkillSelect.innerHTML = "";
    skills.forEach(skill => {
+        const option = document.createElement("option");
+        option.value = skill.name;
+        option.textContent = skill.name;
 
 }
 
