@@ -29,5 +29,7 @@ logForm.addEventListener("submit", function(e) {
    const selectedSkill = logSkillSelect.value;
    const hours = parseInt(document.getElementById("logHours").value);
 
+    if (selectedSkill && hours > 0) {
+
   }
 });
