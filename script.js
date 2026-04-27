@@ -1,15 +1,17 @@
+// Array to store skills
 let skills = [];
 
+// DOM Elements
 const skillForm = document.getElementById("skillForm");
 const logForm = document.getElementById("logForm");
 const logSkillSelect = document.getElementById("logSkill");
 const skillsContainer = document.getElementById("skillsContainer");
 
+// Add new skill
 skillForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const skillName = document.getElementById("skillName").value.trim();
-    const targetHours = parseInt(document.getElementById("targetHours").value);
-}
+  e.preventDefault();
+  const skillName = document.getElementById("skillName").value.trim();
+  const targetHours = parseInt(document.getElementById("targetHours").value);
 
   if (skillName && targetHours > 0) {
     const newSkill = {
@@ -24,12 +26,13 @@ skillForm.addEventListener("submit", function(e) {
   }
 });
 
+// Log hours to skill
 logForm.addEventListener("submit", function(e) {
-   e.preventDefault();
-   const selectedSkill = logSkillSelect.value;
-   const hours = parseInt(document.getElementById("logHours").value);
+  e.preventDefault();
+  const selectedSkill = logSkillSelect.value;
+  const hours = parseInt(document.getElementById("logHours").value);
 
-    if (selectedSkill && hours > 0) {
+  if (selectedSkill && hours > 0) {
     const skill = skills.find(s => s.name === selectedSkill);
     skill.logged += hours;
     renderSkills();
@@ -37,35 +40,34 @@ logForm.addEventListener("submit", function(e) {
   }
 });
 
+// Update dropdown options
 function updateSkillOptions() {
-   logSkillSelect.innerHTML = "";
-   skills.forEach(skill => {
-        const option = document.createElement("option");
-        option.value = skill.name;
-        option.textContent = skill.name;
-        logSkillSelect.appendChild(option);
-
-});
+  logSkillSelect.innerHTML = "";
+  skills.forEach(skill => {
+    const option = document.createElement("option");
+    option.value = skill.name;
+    option.textContent = skill.name;
+    logSkillSelect.appendChild(option);
+  });
 }
 
+// Render skill cards
 function renderSkills() {
-    skillsContainer.innerHTML = "";
-    skills.forEach(skill => {
-        const percent = ((skill.logged / skill.target) * 100).toFixed(1);
-        const remaining = skill.target - skill.logged;
+  skillsContainer.innerHTML = "";
+  skills.forEach(skill => {
+    const percent = ((skill.logged / skill.target) * 100).toFixed(1);
+    const remaining = skill.target - skill.logged;
 
-        const card = document.createElement("div");
-        card.className = "skill-card";
-        card.innerHTML = `
-            <h3>${skill.name}</h3>
-            <p>${skill.logged}/${skill.target} hours (${percent}%)</p>
-            <p>Remaining: ${remaining} hours</p>
-            <div class="progress-bar">
-                 <div class="progress-fill" style="width:${percent}%"></div>
-            </div>
-        `;
-        skillsContainer.appendChild(card);
-    });
+    const card = document.createElement("div");
+    card.className = "skill-card";
+    card.innerHTML = `
+      <h3>${skill.name}</h3>
+      <p>${skill.logged}/${skill.target} hours (${percent}%)</p>
+      <p>Remaining: ${remaining} hours</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width:${percent}%"></div>
+      </div>
+    `;
+    skillsContainer.appendChild(card);
+  });
 }
-
-
