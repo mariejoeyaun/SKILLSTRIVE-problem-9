@@ -17,4 +17,6 @@ skillForm.addEventListener("submit", function(e) {
       target: targetHours,
       logged: 0
     };
+    skills.push(newSkill);
+   
     };
