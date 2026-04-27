@@ -50,6 +50,7 @@ function updateSkillOptions() {
 
 function renderSkills() {
     skillsContainer.innerHTML = "";
+    skills.forEach(skill => {
 
 }
 
