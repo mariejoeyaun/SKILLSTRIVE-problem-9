@@ -62,6 +62,22 @@ button:hover {
   border-radius: 6px;
 }
 
+.progress-bar {
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 18px;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  background: #3498db;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+
 
 
 
