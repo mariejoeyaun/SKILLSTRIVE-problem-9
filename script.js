@@ -56,6 +56,9 @@ function renderSkills() {
 
         const card = document.createElement("div");
         card.className = "skill-card";
+        card.innerHTML = `
+
+        
 
 
 }
