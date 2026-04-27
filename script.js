@@ -23,3 +23,9 @@ skillForm.addEventListener("submit", function(e) {
     skillForm.reset();
   }
 });
+
+logForm.addEventListener("submit", function(e) {
+   e.preventDefault();
+
+  }
+});
