@@ -30,6 +30,7 @@ logForm.addEventListener("submit", function(e) {
    const hours = parseInt(document.getElementById("logHours").value);
 
     if (selectedSkill && hours > 0) {
+    const skill = skills.find(s => s.name === selectedSkill);
 
   }
 });
