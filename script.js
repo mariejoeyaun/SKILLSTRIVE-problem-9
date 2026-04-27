@@ -7,5 +7,6 @@ const skillsContainer = document.getElementById("skillsContainer");
 
 skillForm.addEventListener("submit", function(e) {
     e.preventDefault();
-
+    const skillName = document.getElementById("skillName").value.trim();
+    const targetHours = parseInt(document.getElementById("targetHours").value);
 }
