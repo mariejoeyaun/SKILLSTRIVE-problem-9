@@ -63,11 +63,9 @@ function renderSkills() {
             <div class="progress-bar">
                  <div class="progress-fill" style="width:${percent}%"></div>
             </div>
-            `;
-
-
-
-
+        `;
+        skillsContainer.appendChild(card);
+    });
 }
 
 
