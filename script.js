@@ -51,6 +51,7 @@ function updateSkillOptions() {
 function renderSkills() {
     skillsContainer.innerHTML = "";
     skills.forEach(skill => {
+        const percent = ((skill.logged / skill.target) * 100).toFixed(1);
 
 }
 
