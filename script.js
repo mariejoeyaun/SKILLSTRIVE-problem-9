@@ -26,6 +26,8 @@ skillForm.addEventListener("submit", function(e) {
 
 logForm.addEventListener("submit", function(e) {
    e.preventDefault();
+   const selectedSkill = logSkillSelect.value;
+   const hours = parseInt(document.getElementById("logHours").value);
 
   }
 });
