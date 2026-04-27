@@ -57,8 +57,15 @@ function renderSkills() {
         const card = document.createElement("div");
         card.className = "skill-card";
         card.innerHTML = `
+            <h3>${skill.name}</h3>
+            <p>${skill.logged}/${skill.target} hours (${percent}%)</p>
+            <p>Remaining: ${remaining} hours</p>
+            <div class="progress-bar">
+                 <div class="progress-fill" style="width:${percent}%"></div>
+            </div>
+            `;
 
-        
+
 
 
 }
