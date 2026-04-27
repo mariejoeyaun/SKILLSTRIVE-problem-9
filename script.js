@@ -38,6 +38,7 @@ logForm.addEventListener("submit", function(e) {
 });
 
 function updateSkillOptions() {
-  
+   logSkillSelect.innerHTML = "";
+
 }
 
