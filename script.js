@@ -49,7 +49,8 @@ function updateSkillOptions() {
 }
 
 function renderSkills() {
-  
+    skillsContainer.innerHTML = "";
+
 }
 
 
