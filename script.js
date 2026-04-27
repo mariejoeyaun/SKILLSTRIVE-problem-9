@@ -54,6 +54,9 @@ function renderSkills() {
         const percent = ((skill.logged / skill.target) * 100).toFixed(1);
         const remaining = skill.target - skill.logged;
 
+        const card = document.createElement("div");
+        card.className = "skill-card";
+
 
 }
 
