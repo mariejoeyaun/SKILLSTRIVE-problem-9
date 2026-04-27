@@ -32,6 +32,8 @@ logForm.addEventListener("submit", function(e) {
     if (selectedSkill && hours > 0) {
     const skill = skills.find(s => s.name === selectedSkill);
     skill.logged += hours;
+    renderSkills();
+    logForm.reset();
 
   }
 });
