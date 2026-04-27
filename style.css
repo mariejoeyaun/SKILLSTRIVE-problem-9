@@ -37,4 +37,10 @@ form {
   gap: 10px;
 }
 
+input, select, button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+
 
