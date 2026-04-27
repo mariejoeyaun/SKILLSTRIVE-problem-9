@@ -12,5 +12,9 @@ skillForm.addEventListener("submit", function(e) {
 }
 
   if (skillName && targetHours > 0) {
-    
+    const newSkill = {
+      name: skillName,
+      target: targetHours,
+      logged: 0
+    };
     };
