@@ -34,6 +34,10 @@ logForm.addEventListener("submit", function(e) {
     skill.logged += hours;
     renderSkills();
     logForm.reset();
-
   }
 });
+
+function updateSkillOptions() {
+  
+}
+
