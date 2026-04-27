@@ -27,4 +27,14 @@ header, footer {
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
+.form-box {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 
