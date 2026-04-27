@@ -43,6 +43,8 @@ function updateSkillOptions() {
         const option = document.createElement("option");
         option.value = skill.name;
         option.textContent = skill.name;
+        logSkillSelect.appendChild(option);
 
+});
 }
 
