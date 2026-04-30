@@ -6,7 +6,6 @@ Problem Analysis
 
 
 <br> Features
-
 <br> - Add skills with a name and target hours
 <br> - Log study hours for each skill
 <br> - See progress in cards with totals, percentages, and remaining hours
