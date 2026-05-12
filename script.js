@@ -24,20 +24,6 @@ skillForm.addEventListener("submit", function(e) {
   }
 });
 
-// Log hours to skill
-logForm.addEventListener("submit", function(e) {
-  e.preventDefault();
-  const selectedSkill = logSkillSelect.value;
-  const hours = parseInt(document.getElementById("logHours").value);
-
-  if (selectedSkill && hours > 0) {
-    const skill = skills.find(s => s.name === selectedSkill);
-    skill.logged += hours;
-    renderSkills();
-    logForm.reset();
-  }
-});
-
 // Update dropdown options
 function updateSkillOptions() {
   logSkillSelect.innerHTML = "";
