@@ -3,8 +3,6 @@ let skills = [];
 
 // DOM Elements
 const skillForm = document.getElementById("skillForm");
-const logForm = document.getElementById("logForm");
-const logSkillSelect = document.getElementById("logSkill");
 const skillsContainer = document.getElementById("skillsContainer");
 
 // Add new skill
