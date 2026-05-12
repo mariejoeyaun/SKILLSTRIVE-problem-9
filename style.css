@@ -77,6 +77,26 @@ button:hover {
   transition: width 0.5s ease-in-out;
 }
 
+.log-btn {
+  margin-top: 10px;
+  background: #2980b9;
+}
+
+.log-form {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.log-input {
+  flex: 1;
+  padding: 8px;
+}
+
 @media (max-width: 768px) {
   .grid-layout {
     grid-template-columns: 1fr;
