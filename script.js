@@ -38,9 +38,18 @@ function renderSkills() {
       <h3>${skill.name}</h3>
       <p>${skill.logged}/${skill.target} hours (${percent}%)</p>
       <p>Remaining: ${remaining} hours</p>
+
       <div class="progress-bar">
         <div class="progress-fill" style="width:${percent}%"></div>
       </div>
+
+       <button class="log-btn" data-index="${index}">Log Hours</button>
+
+      <div class="log-form hidden" id="logForm-${index}">
+        <input type="number" min="1" placeholder="Hours" class="log-input">
+        <button class="submit-log">Add</button>
+      </div>
+
     `;
     skillsContainer.appendChild(card);
   });
