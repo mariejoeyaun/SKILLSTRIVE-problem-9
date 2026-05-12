@@ -24,26 +24,17 @@ skillForm.addEventListener("submit", function(e) {
   }
 });
 
-// Update dropdown options
-function updateSkillOptions() {
-  logSkillSelect.innerHTML = "";
-  skills.forEach(skill => {
-    const option = document.createElement("option");
-    option.value = skill.name;
-    option.textContent = skill.name;
-    logSkillSelect.appendChild(option);
-  });
-}
-
 // Render skill cards
 function renderSkills() {
   skillsContainer.innerHTML = "";
+
   skills.forEach(skill => {
     const percent = ((skill.logged / skill.target) * 100).toFixed(1);
     const remaining = skill.target - skill.logged;
 
     const card = document.createElement("div");
     card.className = "skill-card";
+
     card.innerHTML = `
       <h3>${skill.name}</h3>
       <p>${skill.logged}/${skill.target} hours (${percent}%)</p>
