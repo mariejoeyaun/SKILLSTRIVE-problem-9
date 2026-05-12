@@ -49,8 +49,16 @@ function renderSkills() {
         <input type="number" min="1" placeholder="Hours" class="log-input">
         <button class="submit-log">Add</button>
       </div>
-
     `;
+
     skillsContainer.appendChild(card);
   });
+
+   document.querySelectorAll(".log-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const idx = this.dataset.index;
+      document.getElementById(`logForm-${idx}`).classList.toggle("hidden");
+    });
+  });
+
 }
