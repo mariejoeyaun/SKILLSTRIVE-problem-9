@@ -54,10 +54,22 @@ function renderSkills() {
     skillsContainer.appendChild(card);
   });
 
-   document.querySelectorAll(".log-btn").forEach(btn => {
+  document.querySelectorAll(".log-btn").forEach(btn => {
     btn.addEventListener("click", function () {
       const idx = this.dataset.index;
       document.getElementById(`logForm-${idx}`).classList.toggle("hidden");
+    });
+  });
+
+  document.querySelectorAll(".submit-log").forEach((btn, i) => {
+    btn.addEventListener("click", function () {
+      const input = document.querySelector(`#logForm-${i} .log-input`);
+      const hours = parseInt(input.value);
+
+      if (hours > 0) {
+        skills[i].logged += hours;
+        renderSkills();
+      }
     });
   });
 
