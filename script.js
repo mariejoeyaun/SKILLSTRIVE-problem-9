@@ -18,7 +18,6 @@ skillForm.addEventListener("submit", function(e) {
       logged: 0
     };
     skills.push(newSkill);
-    updateSkillOptions();
     renderSkills();
     skillForm.reset();
   }
